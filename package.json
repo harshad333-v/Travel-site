@@ -1,0 +1,36 @@
+{
+  "name": "pbl",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "postinstall": "npm rebuild esbuild --update-binary || true",
+    "verify-cache": "npm cache verify",
+    "clean-install": "powershell -NoProfile -Command \"if (Test-Path node_modules) { Remove-Item -Recurse -Force node_modules } ; if (Test-Path package-lock.json) { Remove-Item -Force package-lock.json } ; npm cache clean --force ; npm install\"",
+    "fix-ebadf": "npm run verify-cache && npm run clean-install",
+    "setupTests": "node ./setupTests.js",
+    "test": "echo \"No tests configured. Run npm run setupTests to prepare tests.\" && exit 0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.4.0",
+    "vite": "^7.1.7"
+  }
+}
