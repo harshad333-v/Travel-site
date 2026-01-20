@@ -7,7 +7,11 @@ import Contect from './Pages/Contect.jsx';
 import About from './Pages/About.jsx';
 import Navbar from './Component/Navbar.jsx';
 import Team1 from './Pages/Team1.jsx';
-
+import './CSS/style.css';
+import './CSS/responsive.css';
+import './CSS/font.css';
+import './CSS/normalize.css';
+import './CSS/utility.css';
 
 // import Form from './Pages/Form.jsx';
 const App = () => {
